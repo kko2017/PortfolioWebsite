@@ -52,6 +52,13 @@ ul {
     padding-left: 0;
 }
 
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* Typography */
 h1 {
     font-size: var(--font-large);
@@ -88,7 +95,8 @@ p {
     align-items: center;
     background-color: var(--color-navy);
     color: var(--color-light-white);
-    padding: 16px;
+    /* padding: 16px;  */
+    padding: 4px; 
 }
 
 .navbar__logo {
@@ -115,4 +123,41 @@ p {
 
 .navbar__menu__item.active {
     border: 1px solid var(--color-white);
+}
+
+/* Home */
+.home {
+    background-image: url("/imgs/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 1750px 700px;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border: 2px solid var(--color-dark-white);
+    border-radius: 50%;
+}
+
+.home__title {
+    color: var(--color-light-white);
+
+}
+
+.home__description {
+    color: var(--color-dark-white);
+}
+
+.home__contact{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-regular);
+    color: var(--color-white);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
 }
