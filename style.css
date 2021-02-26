@@ -31,7 +31,7 @@
     box-sizing: border-box;
 }
 
-/* Typograph */
+/* Typography */
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
