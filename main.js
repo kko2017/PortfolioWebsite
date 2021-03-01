@@ -35,7 +35,15 @@ navbarMenu.addEventListener('click', (e) => {
 });
 
 // Handle click on 'Contact me' button on Home 
-const homeContact = document.querySelector('.home__contact');
-homeContact.addEventListener('click', () => {
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
+});
+
+
+// Make home slowly fade out as the window scrolls down 
+const homeContainer = document.querySelector('.home__container');
+const homeContainerHeight = homeContainer.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    homeContainer.style.opacity = 1 - (window.scrollY / homeContainerHeight);
 });

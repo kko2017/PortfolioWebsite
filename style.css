@@ -160,6 +160,10 @@ p {
     text-align: center;
 }
 
+#home.home--dark {
+    opacity: 0.9;
+}
+
 .home__avatar {
     width: 250px;
     height: 250px;
