@@ -47,3 +47,18 @@ const homeContainerHeight = homeContainer.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     homeContainer.style.opacity = 1 - (window.scrollY / homeContainerHeight);
 });
+
+// Show arrow-up when scrolling down
+const arrowUpBtn = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeContainerHeight / 2) {
+        arrowUpBtn.classList.add('visible');
+    } else {
+        arrowUpBtn.classList.remove('visible');
+    }
+});
+
+// arrow-up button event handler
+arrowUpBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});

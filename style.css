@@ -462,6 +462,7 @@ p {
     color: var(--color-orange);
 }
 
+/* Contact */
 #contact {
     background-color: var(--color-navy);
 }
@@ -485,6 +486,31 @@ p {
 .contact__links i:hover {
     transform: scale(1.1);
     color: var(--color-grey-pink);
+}
+
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-light-white);
+    background-color:var(--color-dark-pink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.arrow-up:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
