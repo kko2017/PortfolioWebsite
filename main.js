@@ -6,17 +6,6 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Navbar is transparent when it is on top.
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-    if (window.scrollY > navbarHeight) {
-        navbar.classList.add('navbar--dark');
-    } else {
-        navbar.classList.remove('navbar--dark');
-    }
-});
-
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (e) => {
@@ -32,6 +21,24 @@ navbarMenu.addEventListener('click', (e) => {
 
     target.classList.add('active');
     scrollIntoView(link);
+});
+
+// Navbar is transparent when it is on top.
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    navbarMenu.classList.remove('open');
+    if (window.scrollY > navbarHeight) {
+        navbar.classList.add('navbar--dark');
+    } else {
+        navbar.classList.remove('navbar--dark');
+    }
+});
+
+// Activate navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 // Handle click on 'Contact me' button on Home 
